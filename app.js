@@ -10,7 +10,7 @@ const methodOverride = require('method-override');
 const Campground = require('./models/campground');
 // const campground = require('./models/campground');
 
-mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp')
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log("DataBase connected");
     })
